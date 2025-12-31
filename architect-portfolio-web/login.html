@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AK_Designer - Login</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: #0b1d26;
+            color: #ffffff;
+        }
+
+        /* Custom Background */
+        .luxury-bg {
+            background-image: url('f168e1ca875f299be577b66d6a67345d.jpg');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        /* Dark Overlay */
+        .luxury-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(11, 29, 38, 0.85);
+            backdrop-filter: blur(5px);
+        }
+
+        /* Custom Colors matching index.css */
+        .text-teal {
+            color: #00bfa5;
+        }
+
+        .text-pink {
+            color: #d92b7e;
+        }
+
+        .bg-pink {
+            background-color: #d92b7e;
+        }
+
+        .hover-bg-pink-dark:hover {
+            background-color: #c2186b;
+        }
+
+        .border-teal {
+            border-color: #00bfa5;
+        }
+
+        /* Glassmorphism Card */
+        .glass-card {
+            background: rgba(21, 42, 53, 0.7);
+            backdrop-filter: blur(15px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+        }
+
+        /* Button Glow Effect */
+        .btn-glow {
+            box-shadow: 0 4px 15px rgba(217, 43, 126, 0.4);
+            transition: all 0.3s ease;
+        }
+
+        .btn-glow:hover {
+            box-shadow: 0 6px 20px rgba(217, 43, 126, 0.6);
+            transform: translateY(-2px);
+        }
+
+        /* Input Autofill styling fix for dark mode */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px #0f202b inset !important;
+            -webkit-text-fill-color: white !important;
+            transition: background-color 5000s ease-in-out 0s;
+        }
+    </style>
+</head>
+
+<body class="luxury-bg min-h-screen flex items-center justify-center p-4">
+
+    <!-- Card Container -->
+    <div class="glass-card w-full max-w-[420px] rounded-[20px] p-8 md:p-10 relative z-10">
+
+        <!-- Logo Section -->
+        <div class="flex flex-col items-center mb-8">
+            <div class="w-16 h-16 mb-4 rounded-xl overflow-hidden shadow-lg border border-white/10">
+                <img src="WhatsApp Image 2025-10-21 at 22.22.57_f294878f.jpg" alt="Logo"
+                    class="w-full h-full object-cover">
+            </div>
+
+            <h2 class="text-teal font-semibold tracking-wide text-sm uppercase mb-1">AK_Designer</h2>
+            <h1 class="text-white text-3xl font-bold mb-2">Welcome Back</h1>
+
+            <p class="text-gray-400 text-sm">
+                New here? <a href="#"
+                    class="text-pink hover:text-white transition-colors duration-200 font-medium">Create Account</a>
+            </p>
+        </div>
+
+        <!-- Form Section -->
+        <form class="space-y-5" onsubmit="event.preventDefault();">
+
+            <!-- Email Input -->
+            <div class="relative group">
+                <input type="email" placeholder="Email Address"
+                    class="w-full bg-[#0f202b] text-white text-sm rounded-lg px-5 py-4 outline-none border border-white/10 focus:border-teal transition-all placeholder-gray-500"
+                    required>
+            </div>
+
+            <!-- Password Input -->
+            <div class="relative group">
+                <input type="password" id="passwordInput" placeholder="Password"
+                    class="w-full bg-[#0f202b] text-white text-sm rounded-lg px-5 py-4 outline-none border border-white/10 focus:border-teal transition-all placeholder-gray-500 pr-12"
+                    required>
+                <button type="button" onclick="togglePassword()"
+                    class="absolute right-4 top-1/2 transform -translate-y-1/2 text-gray-500 hover:text-white transition-colors">
+                    <i class="far fa-eye" id="eyeIcon"></i>
+                </button>
+            </div>
+
+            <!-- Forgot Password -->
+            <div class="flex justify-end">
+                <a href="#" class="text-gray-400 text-xs hover:text-teal transition-colors">Forgot Password?</a>
+            </div>
+
+            <!-- Sign In Button -->
+            <button
+                class="w-full bg-pink hover-bg-pink-dark text-white font-bold py-4 rounded-lg mt-2 btn-glow text-sm tracking-wide uppercase">
+                Sign In
+            </button>
+
+        </form>
+
+        <!-- Social Login -->
+        <button
+            class="w-full bg-[#0f202b] hover:bg-[#152a35] border border-white/10 text-white font-medium py-3.5 rounded-lg mt-8 flex items-center justify-center gap-3 transition-all duration-300 text-sm group">
+            <img src="https://www.svgrepo.com/show/475656/google-color.svg"
+                class="w-5 h-5 group-hover:scale-110 transition-transform" alt="Google">
+            Sign in with Google
+        </button>
+
+    </div>
+
+    <script>
+        function togglePassword() {
+            const passwordInput = document.getElementById('passwordInput');
+            const eyeIcon = document.getElementById('eyeIcon');
+
+            if (passwordInput.type === 'password') {
+                passwordInput.type = 'text';
+                eyeIcon.classList.remove('fa-eye');
+                eyeIcon.classList.add('fa-eye-slash');
+            } else {
+                passwordInput.type = 'password';
+                eyeIcon.classList.remove('fa-eye-slash');
+                eyeIcon.classList.add('fa-eye');
+            }
+        }
+    </script>
+</body>
+
+</html>
