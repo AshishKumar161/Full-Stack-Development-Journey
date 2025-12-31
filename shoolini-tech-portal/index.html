@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shoolini University | Future of Learning</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&family=Space+Grotesk:wght@400;600;700&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <nav class="navbar">
+        <div class="logo">SHOOLINI<span class="highlight">.TECH</span></div>
+        <ul class="nav-links">
+            <li><a href="#hero" class="active">Home</a></li>
+            <li><a href="#stats">Impact</a></li>
+            <li><a href="#programs">Programs</a></li>
+            <li><a href="#research">Research</a></li>
+            <li><a href="#contact">Connect</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+        </div>
+    </nav>
+
+    <header id="hero">
+        <canvas id="particle-canvas"></canvas>
+        <div class="hero-content">
+            <div class="glitch-wrapper">
+                <h1 class="glitch" data-text="INNOVATE">INNOVATE</h1>
+            </div>
+            <h2 class="subtitle">THE FUTURE IS HERE</h2>
+            <p class="hero-desc">Shoolini University: Where technology meets academia. Pioneering research, next-gen
+                learning, and a vision for tomorrow.</p>
+            <div class="cta-group">
+                <a href="#programs" class="btn primary">Explore Programs</a>
+                <a href="#research" class="btn secondary">View Research</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>SCROLL</span>
+            <div class="arrow"></div>
+        </div>
+    </header>
+
+    <section id="stats" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">01 // IMPACT</span>
+                <h3>BY THE NUMBERS</h3>
+            </div>
+            <div class="stats-grid">
+                <div class="stat-card" data-aos="fade-up">
+                    <div class="stat-number" data-target="3000">0</div>
+                    <div class="stat-label">Patents Filed</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number" data-target="100">0</div>
+                    <div class="stat-label">% Placements</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number" data-target="250">0</div>
+                    <div class="stat-label">Global Alliances</div>
+                </div>
+                <div class="stat-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number" data-target="1">0</div>
+                    <div class="stat-label">No. 1 Research Univ</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="programs" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">02 // ACADEMICS</span>
+                <h3>FUTURE READY PROGRAMS</h3>
+            </div>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="card-icon-image">
+                            <img src="Bioengineering.jpg" alt="Bioengineering">
+                        </div>
+                        <h4>Bioengineering</h4>
+                        <p>Redefining life sciences with cutting-edge genetic research.</p>
+                        <a href="#" class="learn-more">Details &rarr;</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="card-icon-image">
+                            <img src="AI-And-Robotics.jpg" alt="ai and robotics">
+                            </div>
+                        <h4>AI & Robotics</h4>
+                        <p>Building the intelligent machines of tomorrow.</p>
+                        <a href="#" class="learn-more">Details &rarr;</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="card-icon-image">
+                            <img src="Cloud Computing.jpg" alt="Cloud Computing">
+                        </div>
+                        <h4>Cloud Computing</h4>
+                        <p>Architecting the digital infrastructure of the world.</p>
+                        <a href="#" class="learn-more">Details &rarr;</a>
+                    </div>
+                </div>
+                <div class="program-card">
+                    <div class="card-border"></div>
+                    <div class="card-content">
+                        <div class="card-icon-image">
+                         <img src="Nanotechnology.jpg" alt="Nanotechnology">
+                        </div>
+                        <h4>Nanotechnology</h4>
+                        <p>Engineering at the atomic scale for massive impact.</p>
+                        <a href="#" class="learn-more">Details &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact-form-section" class="section">
+        <div class="container">
+            <div class="section-header">
+                <span class="tag">03 // CONNECT</span>
+                <h3>JOIN THE FUTURE</h3>
+            </div>
+            <div class="contact-form-wrapper">
+                <form class="contact-form">
+                    <div class="form-group">
+                        <label for="name">Name</label>
+                        <input type="text" id="name" placeholder="Enter your name" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" placeholder="Enter your email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea id="message" rows="5" placeholder="Tell us about your vision" required></textarea>
+                    </div>
+                    <button type="submit" class="btn primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-content">
+            <div class="footer-col">
+                <h5>SHOOLINI.TECH</h5>
+                <p>Solan-Oachghat-Kumarhatti Highway, Bajhol, Himachal Pradesh 173229</p>
+            </div>
+            <div class="footer-col">
+                <h5>Connect</h5>
+                <ul class="social-links">
+                    <li><a href="#">LinkedIn</a></li>
+                    <li><a href="#">Twitter</a></li>
+                    <li><a href="#">Instagram</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>Newsletter</h5>
+                <form class="newsletter-form">
+                    <input type="email" placeholder="Enter email address">
+                    <button type="submit">Subscribe</button>
+                </form>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2025 AK_Designer. All Rights Reserved.</p>
+            <p>Designed by Ashish Kumar</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
